@@ -7,6 +7,9 @@ TagManager:
   - Wall
   - Fire
   - Diamond
+  - Gem
+  - Teleport1
+  - Teleport2
   layers:
   - Default
   - TransparentFX

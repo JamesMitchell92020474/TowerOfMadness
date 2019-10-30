@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Media;
+//using System.Media;
 
 public class Diamonds : MonoBehaviour {
 
@@ -95,8 +95,8 @@ public class Diamonds : MonoBehaviour {
 
     private void Pickup()
     {
-        System.Media.SoundPlayer diamond = new System.Media.SoundPlayer(@"D:\Course Files\IT6034\GD_Project_92020474\TowerOfMadness\TowerOfMadness\Assets\Sounds\DiamondPickup.ogg");
-        diamond.Play();
+       // SoundPlayer diamondPickup = new SoundPlayer();
+       // diamondPickup.Play(@"Assets\\Sounds\\DiamondPickup.ogg");
         GameManager.Instance.numDiamonds++;
         GameManager.Instance.score += 100;
         Destroy(gameObject);

@@ -15,12 +15,14 @@ public class GameManager : Singleton<GameManager>
     private float maxTime = 5 * 60; // in seconds
 
     public int numDiamonds;
+    public int gemsRemaining;
     public int score;
 
     // Start is called before the first frame update
     void Start()
     {
         TimeRemaining = maxTime;
+        gemsRemaining = GameObject.FindGameObjectsWithTag("Gem").Length;
     }
 
     // Update is called once per frame

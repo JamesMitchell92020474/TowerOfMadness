@@ -11,6 +11,9 @@ public class UpdateUI : MonoBehaviour
     [SerializeField]
     private Text scoreLabel;
 
+    [SerializeField]
+    private Text gemsLabel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,7 @@ public class UpdateUI : MonoBehaviour
     {
         timerLabel.text = FormatTime(GameManager.Instance.TimeRemaining);
         scoreLabel.text = "Score: " + GameManager.Instance.score.ToString();
+        gemsLabel.text = "Gems Remaining: " + GameManager.Instance.gemsRemaining.ToString();
     }
 
     private string FormatTime(float timeInSeconds)
