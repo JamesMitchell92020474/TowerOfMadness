@@ -26,6 +26,8 @@ public class Diamonds : MonoBehaviour {
     public float scaleRate;
     private float scaleTimer;
 
+    public AudioClip clip;
+
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
@@ -95,8 +97,7 @@ public class Diamonds : MonoBehaviour {
 
     private void Pickup()
     {
-       // SoundPlayer diamondPickup = new SoundPlayer();
-       // diamondPickup.Play(@"Assets\\Sounds\\DiamondPickup.ogg");
+        AudioSource.PlayClipAtPoint(clip, transform.position);
         GameManager.Instance.numDiamonds++;
         GameManager.Instance.score += 100;
         Destroy(gameObject);

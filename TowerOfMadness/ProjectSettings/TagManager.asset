@@ -10,6 +10,7 @@ TagManager:
   - Gem
   - Teleport1
   - Teleport2
+  - PopupGem
   layers:
   - Default
   - TransparentFX

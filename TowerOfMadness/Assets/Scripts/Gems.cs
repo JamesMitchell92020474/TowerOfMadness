@@ -26,21 +26,29 @@ public class Gems : MonoBehaviour
     public float scaleRate;
     private float scaleTimer;
 
-    public AudioClip gemClip;
-    public AudioSource gemSource;
+    public AudioClip clip;
 
     void OnTriggerEnter(Collider collider)
     {
-        //if (collider.gameObject.tag == "Player")
-       // {
-        Pickup();
-        //}
+        if (collider.gameObject.tag == "Player")
+        {
+            /*if (gameObject.tag == "PopupGem")
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    (gemPopup.isActiveAndEnabled == true);
+                    
+                }
+            }
+            */
+            Pickup();
+        }
     }
 
     // Use this for initialization
     void Start()
     {
-        gemSource.clip = gemClip;
+        
     }
 
     // Update is called once per frame
@@ -100,8 +108,7 @@ public class Gems : MonoBehaviour
 
     private void Pickup()
     {
-        AudioSource gemSource = GetComponent<AudioSource>();
-        gemSource.Play();
+        AudioSource.PlayClipAtPoint(clip, transform.position);
         GameManager.Instance.score += 500;
         GameManager.Instance.gemsRemaining--;
         Destroy(gameObject);

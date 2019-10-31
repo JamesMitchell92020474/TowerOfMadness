@@ -14,10 +14,13 @@ public class UpdateUI : MonoBehaviour
     [SerializeField]
     private Text gemsLabel;
 
+    [SerializeField]
+    private Text gemPopup;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gemPopup.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class UpdateUI : MonoBehaviour
         timerLabel.text = FormatTime(GameManager.Instance.TimeRemaining);
         scoreLabel.text = "Score: " + GameManager.Instance.score.ToString();
         gemsLabel.text = "Gems Remaining: " + GameManager.Instance.gemsRemaining.ToString();
+        gemPopup.text = "This is a gem. You must find all of these before you can exit the level.";
     }
 
     private string FormatTime(float timeInSeconds)
