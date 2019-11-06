@@ -6,6 +6,7 @@ public class Teleporter : MonoBehaviour
 {
     public Transform teleportTarget;
     public GameObject player;
+    public AudioClip clip;
 
     void OnTriggerEnter(Collider collider)
     {

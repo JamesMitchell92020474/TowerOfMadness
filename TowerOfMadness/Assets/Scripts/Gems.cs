@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Gems : MonoBehaviour
 {
+    private GameObject mainUI;
+    private GameObject gemPopup;
 
     public bool isAnimated = false;
 
@@ -32,29 +35,25 @@ public class Gems : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            /*if (gameObject.tag == "PopupGem")
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    (gemPopup.isActiveAndEnabled == true);
-                    
-                }
-            }
-            */
             Pickup();
         }
+    }
+
+    void Awake()
+    {
+        mainUI = UpdateUI.Instance.mainUI;
+        gemPopup = UpdateUI.Instance.gemPopup;
     }
 
     // Use this for initialization
     void Start()
     {
-        
+                
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (isAnimated)
         {
             if (isRotating)
@@ -105,7 +104,7 @@ public class Gems : MonoBehaviour
             }
         }
     }
-
+/* */
     private void Pickup()
     {
         AudioSource.PlayClipAtPoint(clip, transform.position);
@@ -113,5 +112,4 @@ public class Gems : MonoBehaviour
         GameManager.Instance.gemsRemaining--;
         Destroy(gameObject);
     }
-
 }

@@ -34,5 +34,5 @@ public class GameManager : Singleton<GameManager>
         {
             // Do Something for when the time runs out
         }
-    }
+    }   
 }

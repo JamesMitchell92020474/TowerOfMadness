@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2011737824819660747, guid: db0d23c851682074daac0ac28cb511e6,
         type: 3}
       propertyPath: m_Name
-      value: Wall (134)
+      value: Wall2
       objectReference: {fileID: 0}
     - target: {fileID: 2011737824819660751, guid: db0d23c851682074daac0ac28cb511e6,
         type: 3}
@@ -71,6 +71,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ad85a24c76e86cc45bd1040a4d583d90, type: 2}
+      objectReference: {fileID: 2100000, guid: c2c33447d8a9c48e0aebebbe09c0a6a2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db0d23c851682074daac0ac28cb511e6, type: 3}
